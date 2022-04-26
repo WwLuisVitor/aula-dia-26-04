@@ -1,0 +1,42 @@
+
+opçao=-1
+dados=[]
+while opçao !=7:
+ class manifestacao:
+    codigo=0
+    nome=''
+    tipo=0
+    descriçao=''
+ print()
+ print('Ouvidoria faculdade CBA')
+ print()
+ print('1) Listar todas as manifestações')
+ print('2) Listar todas as sugestões')
+ print('3) Listar todas as reclamações')
+ print('4) Listar todos os elogios')
+ print('5) Enviar uma nova manifestação')
+ print('6) Pesquisar protocolo por número')
+ print('7) Sair')
+ opçao=int(input('digite sua opçao '))
+ print()
+ if opçao>7 or opçao<1:
+     print('opção invalida')
+
+ if opçao==1: # Listar todas as manifestações disponiveis
+      print('Essas sao todas as manifestações disponíveis no momento')
+      print()
+ if opçao==5:
+        nome=input('digite seu nome: ')
+        tipo=input('digite o tipo do problema, considerando 1 para reclamaçãoo 2 para sugestão e 3 para elogio ')
+        descrição=input('descreva sua solicitaçao: ')
+        objeto1=manifestacao()
+        objeto1.nome=nome
+        objeto1.tipo=tipo
+        objeto1.descriçao=descrição
+        dados.append(objeto1)
+        printfinal=(str(objeto1.nome)+'-'+str(objeto1.tipo)+'-'+str(objeto1.descriçao))
+        for i in printfinal:
+         print(i)
+        
+
+
