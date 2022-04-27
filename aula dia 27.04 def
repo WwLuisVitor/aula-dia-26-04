@@ -1,0 +1,52 @@
+#questao 1
+def conversao(valor):
+  valorEmDolar=valor*0.2
+  return valorEmDolar
+
+valoremreal=int(input('Digite o valor em reais à ser convertido em dolar: '))
+resultado=conversao(valoremreal)
+print (resultado)
+
+
+questao 2
+def conversao(valor,tipo):
+    tipos=['dolar','euro','pesoarg']
+    if tipo==tipos[0]:
+        conversao=valor*0.2
+    elif tipo==tipos[1]:
+        conversao=valor*0.19
+    else:
+        conversao=valor*22.94
+
+    return conversao
+
+ 
+
+
+valorparaconverter=int(input('Digite o valor em reais à ser convertido: '))
+tipodemoeda=int(input('Escolha para qual moeda será convertido, com 1 para dolar, 2 para euro e 3 para peso argentino: '))
+tipos=['dolar','euro','pesoarg']
+valorparacalcular=conversao(valorparaconverter,tipos[tipodemoeda-1])
+print(valorparacalcular)
+
+questao 3
+def conversao(valor,tipooriginal,novamoeda):
+    tipos=['dolar','euro','pesoarg']
+    if tipooriginal!=tipos[1]and tipooriginal!=tipos[2]:
+        conversao=valor*0.95
+    elif tipooriginal!=tipos[0]and tipooriginal!=tipos[2]:
+        conversao=valor*1.05
+    else:
+        conversao=valor*22.94
+
+    return conversao
+
+ 
+
+
+valorparaconverter=int(input('Digite o valor à ser convertido: '))
+moedaoriginal=int(input('Qual moeda voce está utilizando agora? com 1 para dolar, 2 para euro e 3 para pesoarg'))
+tipodemoeda=int(input('Escolha para qual moeda será convertido, com 1 para dolar, 2 para euro e 3 para peso argentino: '))
+tipos=['dolar','euro','pesoarg']
+valorparacalcular=conversao(valorparaconverter,tipos[moedaoriginal-1],tipos[tipodemoeda-1])
+print(valorparacalcular)
