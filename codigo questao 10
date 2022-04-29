@@ -1,0 +1,39 @@
+dadoscliente=[]
+class Conta:
+    agencia=0
+    conta=0
+    titular=''
+    saldo=0
+class Agencia:
+    contas=[]
+    adicionarConta=Conta()
+    entralista=str(adicionarConta.agencia)+str(adicionarConta.conta)+adicionarConta.titular+str(adicionarConta.saldo)
+    contas.append(entralista)
+    quantidadeContas=len(contas)
+
+
+opçao=-1
+while opçao!=0:
+
+
+    opçao=(int(input('digite oq fazer ')))
+    if opçao==1:
+        quanti=Agencia()
+        printfinal= quanti.quantidadeContas
+        print(printfinal)
+    if opçao==2:
+     for a in dadoscliente:
+        printtotal=str(a.agencia)+'-'+str(a.conta)+'-'+a.titular+'-'+str(a.saldo)
+        print(printtotal)
+    if opçao==3:
+        ag=int(input('agencia: '))
+        cn=int(input('conta: ' ))  
+        tit=input('Titular: ')      
+        sal=int(input('saldo: '))
+        dados=Conta()
+        dados.agencia=ag
+        dados.conta=cn
+        dados.titular=tit
+        dados.saldo=sal
+        dadoscliente.append(dados)
+        Agencia.contas.append(dados)
